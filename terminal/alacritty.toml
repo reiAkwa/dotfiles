@@ -1,29 +1,37 @@
 [font]
-normal = {family = "Iosevka", style = "regular"}
+normal = {family = "IosevkaCustomAkwa Nerd Font", style = "regular"}
 
 [window]
-opacity = 0.8
+# opacity = 0.8
+
+[colors]
+
+[colors.primary]
+foreground = "#4D4D4D"
+background = "#F0F8FF"
 
 [colors.normal]
-black   = "#595959"
-red     = "#ff71ad"
-green   = "#56d6a0"
-yellow  = "#fdfa3f"
-blue    = "#3eddf2"
-magenta = "#fc209f"
-cyan    = "#44ece4"
-white   = "#e4e4e4"
+black   = "#3B3B3B"
+red     = "#C998AE"
+green   = "#7FAD9C"
+yellow  = "#CFB886"
+blue    = "#56A0D1"
+magenta = "#CBA0E3"
+cyan    = "#99BFD1"
+white   = "#C2C2C2"
 
 [colors.bright]
-black   = "#676767"
-red     = "#fa3866"
-green   = "#56d6a0"
-yellow  = "#fdfa3f"
-blue    = "#00e1ff"
-magenta = "#ff0086"
-cyan    = "#00fff2"
-white   = "#f9f9f9"
+black   = "#969696"
+red     = "#D6ABBC"
+green   = "#93B89F"
+yellow  = "#C4B290"
+blue    = "#7DB0D6"
+magenta = "#C0A3DE"
+cyan    = "#98BECF"
+white   = "#D4D4D4"
 
+[cursor]
+style = {shape = "Beam", blink = "Never"}
 
 [mouse]
 bindings = [
