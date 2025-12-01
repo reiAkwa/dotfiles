@@ -1,40 +1,45 @@
 "ui.background" = "white"
-"ui.text" = "gray"
+"ui.text" = "black"
 "ui.text.focus" = { fg = "white", bg = "blue" }
-"ui.selection" = { fg = "white", bg = "light-blue" }
+"ui.selection" = { fg = "white", bg = "cyan" }
 "ui.cursor" = { fg = "white", bg = "blue" }
+"ui.cursor.insert" = { fg = "white", bg = "blue" }
+"ui.cursor.match" = { fg = "white", bg = "maganta" }
 "ui.linenr" = "gray"
-"ui.linenr.selected" = "blue"
-"ui.statusline" = "cyan"
-"ui.statusline.normal" = { fg = "black", bg = "light-cyan"}
-"ui.statusline.insert" = { fg = "black", bg = "red" }
-"ui.statusline.select" = { fg = "black", bg = "green" }
-"ui.statusline.inactive" = "light-gray"
-"ui.popup" = "gray"
+"ui.linenr.selected" = "white"
+"ui.statusline" = { fg = "white", bg = "cyan"}
+"ui.statusline.normal" = { fg = "white", bg = "blue"}
+"ui.statusline.insert" = { fg = "white", bg = "red" }
+"ui.statusline.select" = { fg = "white", bg = "green" }
+"ui.statusline.inactive" = "gray"
+"ui.bufferline" = { fg = "white", bg = "cyan"}
+"ui.bufferline.active" = { fg = "white", bg = "blue"}
+"ui.bufferline.background" = { fg = "white", bg = "cyan"}
+"ui.popup" = { fg = "black", bg = "white"}
 "ui.popup.header" = { fg = "white", bg = "cyan" }
-"ui.window" = "black"
+"ui.window" = { fg = "black", bg = "white"}
 "ui.help" = "black"
-"ui.gutter" = "light-gray"
-"ui.gutter.selected" = "gray"
+"ui.gutter" = "gray"
+"ui.gutter.selected" = { fg = "white", bg = "cyan"}
 
 "ui.debug.active" = { bg = "magenta" }
 
 "ui.menu" = "black"
 "ui.menu.selected" = { fg = "white", bg = "cyan" }
 
-"warning" = "light-yellow"
-"error" = "light-red"
-"info" = "light-green"
-"hint" = "light-cyan"
+"warning" = "yellow"
+"error" = "red"
+"info" = "green"
+"hint" = "cyan"
 
-"diagnostic" = { bg = "light-red", underline = { color = "red", style = "curl" } }
-"diagnostic.hint" = { bg = "light-cyan", underline = { color = "light-cyan", style = "line" } }
-"diagnostic.info" = { bg = "light-green", underline = { color = "light-green", style = "line" } } 
-"diagnostic.warning" = { bg = "light-yellow", underline = { color = "light-yellow", style = "curl" } }
-"diagnostic.error" = { bg = "light-red", underline = { color = "light-red", style = "curl" } }
+"diagnostic" = { fg = "black", bg = "red", underline = { color = "red", style = "curl" } }
+"diagnostic.hint" = { fg = "black", bg = "cyan", underline = { color = "cyan", style = "line" } }
+"diagnostic.info" = { fg = "black", bg = "green", underline = { color = "green", style = "line" } } 
+"diagnostic.warning" = { fg = "black", bg = "yellow", underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { fg = "black", bg = "red", underline = { color = "red", style = "curl" } }
 
-"type" = "light-blue"
-"type.builtin" = { fg = "light-blue", modifiers = ["italic"] }
+"type" = "blue"
+"type.builtin" = { fg = "blue", modifiers = ["italic"] }
 "type.parameter" = "magenta"
 
 "constant" = { fg = "red", underline = { color = "red", style = "line" } }
@@ -50,7 +55,7 @@
 "variable.builtin" = { fg = "cyan", modifiers = ["italic"] }
 "variable.parameter" = "magenta"
 
-"label" = "light-blue"
+"label" = "blue"
 
 "punctuation" = "black"
 
@@ -59,16 +64,17 @@
 
 "function" = "cyan"
 "function.builtin" = { fg = "cyan", modifiers = ["italic"] }
+"constructor" = "magenta"
 
-"tag" = "light-blue"
+"tag" = "blue"
 "tag.builtin" = { fg = "blue", modifiers = ["italic"] }
 
 "namespace" = "red"
 
 "markup" = "cyan"
 
-"diff.plus" = { bg = "light-green" }
-"diff.minus" = { bg = "light-red" }
+"diff.plus" = { bg = "green" }
+"diff.minus" = { bg = "red" }
 
 [palette]
 black = "#3B3B3B"
@@ -82,10 +88,10 @@ magenta = "#CBA0E3"
 cyan = "#99BFD1"
 gray = "#C2C2C2"
 
-light-red = "#D6ABBC"
-light-green = "#93B89F"
-light-yellow = "#C4B290"
-light-blue = "#7DB0D6"
-light-magenta = "#C0A3DE"
-light-cyan = "#98BECF"
-light-gray = "#D4D4D4"
+# light-red = "#D6ABBC"
+# light-green = "#93B89F"
+# light-yellow = "#C4B290"
+# light-blue = "#7DB0D6"
+# light-magenta = "#C0A3DE"
+# light-cyan = "#98BECF"
+# light-gray = "#D4D4D4"
