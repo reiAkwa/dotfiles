@@ -2,19 +2,22 @@
 
 # install the dotfile
 
+USE_GUI=${USE_GUI:-0}
+USE_INTEL=${USE_INTEL:-0}
+USE_AMD=${USE_AMD:-0}
+
 if [ $(whoami) = "root" ]; then
   echo "do not install as root!"
-  return 1
+  exit 1
 fi
 
 # preparation
 sudo pacman -Syyuu
 
-sudo cat << EOF
+sudo tee -a /etc/pacman.conf >/dev/null << 'EOF'
 [archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-EOF >> /etc/pacman.conf
-sudo pacman -Sy archlinuxcn-keyring
+EOF
 
 # TODO: enable multilib
 
@@ -26,7 +29,7 @@ sudo pacman -S yay
 sudo pacman -S base-devel curl wget cmake xmake rustup llvm lua python node npm zig clang pip go pnpm yarn
 sudo npm i -g typescript
 npm install -g cnpm --registry=https://registry.npmmirror.com # fuck npm
-sudo rustup default stable
+rustup default stable
 
 # editor & lsps
 sudo pacman -S helix
@@ -42,7 +45,7 @@ sudo go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest # 
 yay -S marksman-bin
 yay -S termux-language-server
 sudo pacman -S python-lsp-server
-sudo rustup component add rust-analyzer
+rustup component add rust-analyzer
 sudo npm i -g svelte-language-server
 sudo npm i -g typescript-svelte-plugin
 cargo install taplo-cli --locked --features lsp
@@ -107,7 +110,7 @@ if [ $USE_GUI -eq 1 ]; then
   yay -S clash-verge-rev-bin #!!!
   yay -S linuxqq
   yay -S wechat
-  sudo pacman obs-studio
+  sudo pacman -S obs-studio
 
   # editor
   yay -S visual-studio-code-bin
@@ -120,4 +123,3 @@ if [ $USE_GUI -eq 1 ]; then
   # yay -S hmcl-bin
   # sudo pacman -S steam
 fi
-
